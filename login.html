@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mental health</title>
+    <link rel="stylesheet" href="/assets/style/style.css" />
+    <link rel="stylesheet" href="/assets/style/contact-us.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="contact-us-sec">
+      <div class="container">
+        <div class="contact-us-content">
+          <div class="contact-us-image">
+            <img class="contact-us-img" src="assets/images/login_img.jpg" alt="image">
+        </div>
+          <div class="contact-form-content">
+            <h2 class="contact-heading">login Page</h2>
+            <div class="contact-form">
+              <input
+                class="contact-input"
+                type="email"
+                placeholder="Email"
+                id="email"
+                name="email"
+              />
+              <input
+                class="contact-input"
+                type="password"
+                placeholder="password"
+                id="password"
+                name="password"
+              />
+              <div>
+                <button class="contact-cta" type="submit" onclick="loginUser()">
+                  Login
+                </button>
+                <button class="contact-cta">
+                  <a href="/sign-up.html">Register</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    async function loginUser() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const apiUrl = "http://localhost:9002/login";
+
+      try {
+        const response = await fetch(apiUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        });
+
+        const data = await response.json();
+        if (data.message === "Login Success") {
+          localStorage.setItem("user", JSON.stringify(data.user));
+          alert("login Successfully");
+          setTimeout(() => {
+            window.location.href = "http://127.0.0.1:5500/";
+          }, 2000);
+        } else {
+          alert("User Not Exist");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        // Handle errors here
+      }
+    }
+  </script>
+</html>
