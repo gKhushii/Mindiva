@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+}
+.contact-us-content{
+    background-color: #DCEDFE;
+    padding: 20px;
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.contact-us-img{
+    max-width: 649px;
+    width: 100%;
+    display: block;
+    line-height: 0;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+.contact-form-content{
+    max-width: 673px;
+    width: 100%;
+    padding: 68px 72px;
+    background-color: #fff;
+}
+.contact-heading{
+    color: #1C1C1C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+    margin-bottom:22px;
+}
+.contact-info{
+    color: #545454;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    max-width: 528px;  
+    width: 100%;
+    margin-bottom: 30px;
+}
+.contact-input ,.contact-input::placeholder{
+    max-width: 528px;
+    width: 100%;
+    padding: 17px 31px;
+    background-color: #fff;
+    border: 1px solid #DCDCDC;
+    color: #B9B9B9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:  25px;
+    outline: none;
+    margin-bottom: 20px;
+}
+.contact-input::placeholder{
+    border: unset;
+    padding: 0;
+}
+.contact-textarea{
+    resize: none;
+}
+.contact-cta{
+    max-width: 529px;
+    width: 100%;
+    padding: 17px 20px;
+    text-align: center;
+    outline: none;
+    border: 0;
+    background-color: #0152A8;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+@media(max-width:768px){
+    .contact-form-content{
+        padding: 25px 15px;
+        text-align: center;
+    }
+    .contact-heading{
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+    .contact-info{
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+    .contact-input, .contact-input::placeholder{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .contact-us-content{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contact-us-img{
+        max-width:100%;
+        width: 100%;
+        height: unset;
+        margin: 0 auto;
+    }
+
+}

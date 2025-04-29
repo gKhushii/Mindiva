@@ -1,0 +1,685 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+a{
+    color: #FFF;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* commaon css starts */
+button {
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.btn_solid {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #4b639a;
+    font-family: poppins;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.48px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.btn_border {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: transparent;
+    font-family: poppins;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.48px;
+    color: #242424;
+    border: 1px solid #242424;
+    white-space: nowrap;
+}
+
+
+.sec_heading {
+    font-family: roboto;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.64px;
+}
+
+.sec_text {
+    font-family: poppins;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2%;
+    color: #242424;
+}
+
+
+
+
+/* commaon css end */
+
+.banner_sec {
+    background: #fff;
+    margin-bottom: 70px;
+}
+
+.banner_content {
+    justify-content: space-between;
+}
+
+.banner_left {
+    width: 50%;
+}
+
+.banner_heading {
+    font-family: roboto;
+    font-weight: 600;
+    font-size: 56px;
+    letter-spacing: 0.2px;
+    margin-bottom: 10px;
+    color: #242424;
+}
+
+.banner_text {
+    margin-bottom: 32px;
+}
+
+.banner_btns {
+    gap: 26px;
+}
+
+
+.counters_sec {
+    margin-bottom: 157px;
+}
+
+.counters_wrapper {
+    gap: 30px;
+    justify-content: center;
+}
+
+.counters_item {
+    padding: 25px 50px;
+    border-radius: 20px;
+    background: #2DCF57;
+    text-align: center;
+}
+
+.counter {
+    color: #FFF;
+    font-family: poppins;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.counters_bg {
+    background: #242424;
+}
+
+.sub_title {
+    color: #FFF;
+    font-family: poppins;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.services_sec {
+    padding: 100px 20px;
+}
+
+.service_wrapper {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.service_heading {
+    margin-bottom: 10px;
+}
+
+.services_list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 30px;
+}
+
+.service_item {
+    max-width: 347px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #FFF;
+    padding: 40px 40px 40px 27px;
+    height: 100%;
+}
+
+.service_icon {
+    margin-bottom: 20px;
+}
+
+.sec_title {
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    color: #aac3fd;
+}
+
+.service_title {
+    margin-bottom: 8px;
+}
+
+.appointment_sec {
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+.appointment_bg {
+    background: #aac3fd;
+    display: grid;
+    place-content: center;
+    border-radius: 30px;
+    min-height: 438px;
+
+}
+
+.appointment_layer {
+    object-fit: cover;
+    width: 100%;
+    object-position: center left;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+
+.appointment_title {
+    font-weight: 600;
+    color: #E4F4E8;
+    margin-bottom: 10px;
+}
+
+.appointment_heading {
+    text-align: center;
+    font-family: roboto;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 107%;
+    letter-spacing: 0.96px;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.appointment_content {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.our_client {
+    padding: 100px 20px;
+}
+
+.our_client_top {
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 64px;
+}
+
+.our_client_heading {
+    margin-bottom: 10px;
+}
+
+.slider_card {
+    max-width: 770px;
+    width: 100%;
+    padding: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.slider_card-top {
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
+.client_profile {
+    gap: 24px;
+}
+
+.client_name {
+    color: #242424;
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.stars {
+    gap: 10px;
+}
+
+.why_sec {
+    margin-bottom: 157px;
+}
+
+.why_wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 77px;
+}
+
+.why_list {
+    max-width: 505px;
+    width: 100%;
+}
+
+.why_item {
+    padding-left: 15px;
+    margin-bottom: 46px;
+    border-left: 2px solid #000000;
+}
+
+.why_item:last-child {
+    margin-bottom: 0;
+}
+
+.why_img {
+    max-width: 500px;
+    max-width: 100%;
+}
+
+.request_sec {
+    margin-bottom: 157px;
+}
+
+.req_content {
+    padding: 94px;
+    border-radius: 30px;
+    background:#aac3fd;
+    display: flex;
+    justify-content: space-between;
+    gap: 65px;
+    align-items: center;
+}
+
+.req_que {
+    color: #E4F4E8;
+    font-family: "roboto";
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.32px;
+    margin-bottom: 8px;
+}
+
+.req_heading {
+    color: #FFF;
+    font-family: "roboto";
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 0.96px;
+    margin-bottom: 14px;
+}
+
+.req_text {
+    color: white;
+    margin-bottom: 53px;
+}
+
+.req_imgs {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.doctor {
+    margin-left: -30px;
+}
+
+.doc_sec {
+    color: white;
+    max-width: 226px;
+    width: 100%;
+}
+
+.req_input {
+    padding: 15px 24px;
+    margin-bottom: 31px;
+    width: 100%;
+}
+.header_logo img {
+    max-width: 70px;
+    width: 100%;
+    display: block;
+    line-height: 0px;
+}
+.header_logo_text{
+    font-size: 30px;
+    line-height: 42px;
+    font-weight: 600;
+    font-style: italic;
+    font-family: "roboto";
+    color: #4b639a;
+}
+.banner_image {
+    max-width: 40%;
+    width: 100%;
+}
+@media (max-width:1100px) {
+    .banner_heading {
+        font-size: 50px;
+    }
+
+    .btn_solid,
+    .btn_border {
+        font-size: 17px;
+    }
+
+    .hero_img {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .counters_wrapper {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .why_item {
+        margin-bottom: 20px;
+    }
+
+    .req_content {
+        gap: 30px;
+    }
+
+}
+
+@media (max-width:991px) {
+    .banner_heading {
+        font-size: 45px;
+    }
+
+    .btn_solid,
+    .btn_border {
+        font-size: 16px;
+        padding: 7px 15px;
+    }
+
+    .services_list {
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-around;
+    }
+
+    .appointment_bg {
+        min-height: 350px;
+    }
+
+    .why_wrapper {
+        gap: 30px;
+    }
+
+    .why_img {
+        max-width: 450px;
+        max-width: 100%;
+    }
+
+    .req_content {
+        padding: 35px;
+    }
+
+
+}
+
+@media (max-width:768px) {
+    .banner_sec {
+        padding: 60px 0;
+    }
+
+    .banner_content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .banner_heading {
+        font-size: 36px;
+    }
+
+    .banner_left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero_img {
+        width: 100%;
+    }
+
+    .banner_btns {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner_btn1,
+    .banner_btn2 {
+        width: 100%;
+    }
+
+    .counters_sec {
+        margin-bottom: 60px;
+    }
+
+    .service_wrapper {
+        margin-bottom: 30px;
+    }
+
+    .counters_item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .counter {
+        font-size: 54px;
+    }
+
+    .sub_title {
+        font-size: 14px;
+    }
+
+    .services_sec {
+        padding: 60px 20px;
+    }
+
+    .services_list {
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .service_item {
+        padding: 20px;
+    }
+
+    .service_icon {
+        margin-bottom: 12px;
+        max-width: 60px;
+        width: 100%;
+    }
+
+    .sec_title {
+        font-size: 16px;
+    }
+
+    .sec_text {
+        font-size: 14px;
+    }
+
+    .appointment_sec {
+        margin-bottom: 60px;
+    }
+
+    .our_client {
+        margin-bottom: 60px;
+    }
+
+    .our_client_top {
+        margin-bottom: 30px;
+    }
+
+    .appointment_bg {
+        min-height: 290px;
+    }
+
+    .appointment_content {
+        padding: 15px;
+    }
+
+    .appointment_heading {
+        font-size: 36px;
+        margin-bottom: 16px;
+        line-height: 95%;
+    }
+
+    .slider_card {
+        padding: 20px;
+    }
+
+    .slider_card-top {
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    .client_profile {
+        gap: 12px;
+    }
+
+    .client_profile img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .client_name {
+        font-size: 16px;
+    }
+
+    .stars {
+        gap: 5px;
+    }
+
+    .stars>svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .client_review {
+        font-size: 14px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 24px !important;
+    }
+
+    .why_sec {
+        margin-bottom: 60px;
+    }
+
+    .why_wrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .why_list {
+        max-width: 100%;
+    }
+
+    .why_img {
+        max-width: 100%;
+    }
+
+    .request_sec {
+        margin-bottom: 60px;
+    }
+
+    .req_content {
+        flex-direction: column;
+    }
+
+
+    .req_imgs {
+        padding-left: 30px;
+    }
+
+    .req_heading {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .req_text {
+        margin-bottom: 30px;
+    }
+
+    .req_input {
+        padding: 8px 24px;
+        margin-bottom: 24px;
+    }
+
+}
+
+
+@media(max-width:525px) {
+    .services_list {
+        grid-template-columns: repeat(1, auto);
+        justify-content: center;
+    }
+
+    .service_item {
+        max-width: 100%;
+    }
+
+    .appointment_bg {
+        min-height: 250px;
+    }
+
+    .appointment_content {
+        max-width: 100%;
+    }
+}
+
