@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mental health</title>
+    <link rel="stylesheet" href="/assets/style/style.css" />
+    <link rel="stylesheet" href="/assets/style/contact-us.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="contact-us-sec">
+      <div class="container">
+        <div class="contact-us-content">
+          <div class="contact-us-image">
+            <img class="contact-us-img" src="assets/images/login_img.jpg" alt="image">
+        </div>
+          <div class="contact-form-content">
+            <h2 class="contact-heading">Book an appoinment</h2>
+            <p class="contact-info">
+            </p>
+            <div class="contact-form">
+              <input
+                class="contact-input"
+                type="text"
+                placeholder="Name"
+                id="name"
+                name="name"
+              />
+              <input
+                class="contact-input"
+                type="email"
+                placeholder="Email"
+                id="email"
+                name="email"
+              />
+              <input
+                class="contact-input"
+                type="number"
+                placeholder="Phone"
+                id="phone"
+                name="phone"
+              />
+              <input
+                class="contact-input"
+                type="text"
+                placeholder="Subject"
+                id="subject"
+                name="subject"
+              />
+              <textarea
+                class="contact-input contact-textarea"
+                rows="6"
+                cols="60"
+                placeholder="Message..."
+                id="message"
+                name="message"
+              ></textarea>
+              <button class="contact-cta" type="submit" onclick="bookNow()">
+                Booking Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    async function bookNow() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const subject = document.getElementById("subject").value;
+      const phone = document.getElementById("phone").value;
+      const message = document.getElementById("message").value;
+
+      const apiUrl = "http://localhost:9002/booking";
+
+      if (
+        name !== "" &&
+        email !== "" &&
+        subject !== "" &&
+        phone !== "" &&
+        message !== "" &&
+        subject !== ""
+      ) {
+        try {
+          const response = await fetch(apiUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name, email, phone, subject, message }),
+          });
+
+          const data = await response.json();
+          localStorage.setItem("booking", JSON.stringify(data.booking));
+          alert("Request sent succesfuly");
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      } else {
+        alert("Need Mandatory fields");
+      }
+    }
+  </script>
+</html>
