@@ -73,37 +73,5 @@
         </div>
       </div>
     </section>
-    <script>
-      async function registerUser() {
-        debugger
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const phone = document.getElementById("phone").value;
-        const cnfrmPassword = document.getElementById("cnfrm_password").value;
-
-        const apiUrl = "http://localhost:9002/register";
-
-        if (name!=="" && email !=="" && password!=="" && phone!=="" && password === cnfrmPassword) {
-          try {
-            const response = await fetch(apiUrl, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ name, email, password, phone }),
-            });
-
-            const data = await response.json();
-            localStorage.setItem("user", JSON.stringify(data.user));
-            window.location.href = "http://127.0.0.1:5500";
-          } catch (error) {
-            console.error("Error:", error);
-          }
-        } else {
-          alert("Password Mismatched or need Mandatory fields");
-        }
-      }
-    </script>
   </body>
 </html>

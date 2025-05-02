@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head></head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthcare Website</title>
@@ -544,29 +544,4 @@
     <script src="assets/js/index.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
-<script>
-    function logout(){
-        alert("logout succesfully")
-        localStorage.clear()
-        window.location.reload()
-    }
-    function loadFromLocalStorage (){
-        let user= localStorage.getItem("user")
-        let ctas= document.querySelector(".header_button")
-        let logoutCta= document.querySelector(".logout_cta")
-        if(user){
-    ctas.style.display="none"
-    logoutCta.style.display="block"
-    
-        }else{
-            ctas.style.display="block"
-    logoutCta.style.display="none"
-
-
-        }
-        }
-  window.onload = function () {
-        loadFromLocalStorage();
-      };
-</script>
 </html>
