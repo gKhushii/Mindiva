@@ -51,36 +51,4 @@
       </div>
     </section>
   </body>
-  <script>
-    async function loginUser() {
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-
-      const apiUrl = "http://localhost:9002/login";
-
-      try {
-        const response = await fetch(apiUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email, password }),
-        });
-
-        const data = await response.json();
-        if (data.message === "Login Success") {
-          localStorage.setItem("user", JSON.stringify(data.user));
-          alert("login Successfully");
-          setTimeout(() => {
-            window.location.href = "http://127.0.0.1:5500/";
-          }, 2000);
-        } else {
-          alert("User Not Exist");
-        }
-      } catch (error) {
-        console.error("Error:", error);
-        // Handle errors here
-      }
-    }
-  </script>
 </html>

@@ -70,42 +70,4 @@
       </div>
     </section>
   </body>
-  <script>
-    async function bookNow() {
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const subject = document.getElementById("subject").value;
-      const phone = document.getElementById("phone").value;
-      const message = document.getElementById("message").value;
-
-      const apiUrl = "http://localhost:9002/booking";
-
-      if (
-        name !== "" &&
-        email !== "" &&
-        subject !== "" &&
-        phone !== "" &&
-        message !== "" &&
-        subject !== ""
-      ) {
-        try {
-          const response = await fetch(apiUrl, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ name, email, phone, subject, message }),
-          });
-
-          const data = await response.json();
-          localStorage.setItem("booking", JSON.stringify(data.booking));
-          alert("Request sent succesfuly");
-        } catch (error) {
-          console.error("Error:", error);
-        }
-      } else {
-        alert("Need Mandatory fields");
-      }
-    }
-  </script>
 </html>
